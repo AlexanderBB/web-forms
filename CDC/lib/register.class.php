@@ -60,7 +60,7 @@ class register {
 			$namePattern 	= '/^\p{L}+$/u';
 			$lastnameLength = mb_strlen($dataBox['lastname'],'utf8');
 			$telOptions 	= array('options' => array('min_range' => 8,'max_range' => 12));
-			$telLength 		= strlen($dataBox['tel']);
+			$telLength 	= strlen($dataBox['tel']);
 			$telPattern 	= '/^[0-9]+$/';
 			$emailOptions 	= array('options' => array('min_range' => 5,'max_range' => 64));
 			$emailLength 	= strlen($dataBox['email']);
