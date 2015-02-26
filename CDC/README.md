@@ -1,11 +1,18 @@
-# simple-register-form
+# CDC - Carier Development Center
 
-This form is for fast reliable developing of an register users or make web form for polls.
-Basically any kind of web form for fast register.
+This is web form for gathering basic information about students, so the university can help them build better connection with the business.
 
-#Used technologies:
+##Used technologies:
 
--Display:
-    HTML5 / CSS / AJAX / JS && JS libraries  -  FLATUI / Bootstrap / jQuery;
--Server side scripting:
-    OOP PHP5;
+* Display:
+    * HTML5
+    * CSS
+        * FLATUI
+        * Bootstrap
+    * JS
+    * jQuery
+    * AJAX
+
+* Server side scripting:
+    * OOP PHP5
+    * CLASS [PHPMailer](https://github.com/PHPMailer/PHPMailer "GitHub link")
