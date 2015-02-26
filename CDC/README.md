@@ -8,8 +8,10 @@ This is web form for gathering basic information about students, so the universi
     * HTML5
     * CSS
         * FLATUI
-        * Bootstrap
+        * Bootstrap-theme.min.css
+        * Bootstrap.min.css
     * JS
+        * Bootstrap.min.js
     * jQuery
     * AJAX
 
