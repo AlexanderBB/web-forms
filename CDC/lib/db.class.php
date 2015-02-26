@@ -4,13 +4,13 @@
  *    Using MySqli php class for acquiring an obj instance.
  *    DB's:
  *    ---------------------------------------------------------------------
- *    1. dbname
+ *    1. db_test
  *    ---------------------------------------------------------------------
  *
  *    Settings
  *    ----------------------
- *    user: 
- *    pass: 
+ *    user: db_test
+ *    pass: testpass
  *    
  *    This is example DB mapping for the used fields in the Database table.
  *    DB map:
@@ -48,14 +48,14 @@ class db extends mysqli{
          * 
          * @var srting $_dbUser
          */
-	private $_dbUser = '';
+	private $_dbUser = 'db_test';
         
         /**
          * Enter the password for your Database
          * 
          * @var srting $_dbPass
          */
-	private $_dbPass = '';
+	private $_dbPass = 'testpass';
         
 	private static $_dbInstance;
 	
@@ -68,7 +68,7 @@ class db extends mysqli{
          * @example $db = new DataBaseConnect('new_db'); - call instance with selected new_db as database 
          *
          */
-	public function __construct($dbName = 'db_name') {
+	public function __construct($dbName = 'db_test') {
 		self::$_dbInstance = 
 			parent::__construct($this->_dbHost, $this->_dbUser, $this->_dbPass, $dbName);
 		return self::$_dbInstance;

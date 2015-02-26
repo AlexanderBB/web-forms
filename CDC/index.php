@@ -7,7 +7,16 @@
 	<head>
 		<title>Course poll card</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-                <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+                <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="js/_custom.inc.js"></script> 
 		<style>
 			.fixHeight{height:auto !important;}
 			.fixWidth{width:115px !important;text-align: right;}
@@ -40,25 +49,6 @@
 	<div class="container">
 		<?php new init();?>
     </div>
-	<!-- TODO: CLEAR THE UNUSED JS libs -->
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script src="js/flatui-radio.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/bootstrap-switch.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <!-- <script src="FLATUI/js/bootstrap.min.js"></script>-->
-    <script src="js/flatui-checkbox.js"></script>
-    <script src="js/flatui-radio.js"></script>
-    <script src="js/jquery.tagsinput.js"></script>
-    <script src="js/jquery.placeholder.js"></script>
-    <script src="js/jquery.stacktable.js"></script>
-    <!-- <script src="http://vjs.zencdn.net/c/video.js"></script>-->
-    <script src="js/application.js"></script>
-    <!-- Custom JavaScript functions -->
-    <script src="js/_custom.inc.js"></script>
 	</body>
 </html>
         <?php }?>
