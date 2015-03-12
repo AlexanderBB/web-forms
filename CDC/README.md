@@ -7,11 +7,12 @@ This is web form for gathering basic information about students, so the universi
 * Display:
     * HTML5
     * CSS
-        * FLATUI
-        * Bootstrap-theme.min.css
-        * Bootstrap.min.css
+        * FLATUI (CDN include)
+        * Bootstrap-theme.min.css (CDN include)
+        * Bootstrap.min.css (CDN include)
     * JS
-        * Bootstrap.min.js
+        * Bootstrap.min.js (CDN include)
+        * _custom.inc.js
     * jQuery
     * AJAX
 
