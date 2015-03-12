@@ -10,8 +10,10 @@ class register {
 	private $_error;
 	private $_msgTxt;
 	private $_mysqli; 
+	private $_phpMailer;
 	
 	function __construct(){
+		$this->_phpMailer = new PHPMailer();
 		$this->_mysqli = new db();
 		$this->_msgTxt = '';
 		$this->_error = 0;
@@ -107,9 +109,15 @@ class register {
 	}
 	
 	private function _sendEmail($dataBox){
-        $to     = "Alex <Alex@example.com>" . "," ."Alex2 <Alex2@example.com>";
-        $subject= "You have a new filled form";
-        $message= "The following information was recorded in the DB:"
+            /**
+             * PHPMailer - check documentations for full options description
+             */	
+            $this->_phpMailer->From = "registerform@example.com";
+            $this->_phpMailer->FromName = "Web Form Mail";
+            $this->_phpMailer->CharSet = "utf-8";
+            $this->_phpMailer->AddAddress("alex@example.com", "Alex");
+            $this->_phpMailer->Subject = "Registration in your CCD form";
+            $this->_phpMailer->Body = "The following information was recorded in the DB:"
                 ."<p><ol>
                     <li>Name: {$dataBox[name]}</li>
                     <li>Lastname: {$dataBox[lastname]}</li>
@@ -121,17 +129,13 @@ class register {
                     <li>Question Field: {$dataBox[question_field]}</li>
                   </ol>
                   </p>";
-        $headers = 'From: registerform@example.com' . "\r\n" .
-                   'Reply-To: alex@example.com' . "\r\n" .
-                   'X-Mailer: PHP/' . phpversion(). "\r\n" .
-                   'MIME-Version: 1.0' . "\r\n" . 
-                   'Content-type: text/html; charset=utf-8' . "\r\n";
-        if(!mail($to,$subject,$message,$headers)){
-			$this->_error 	= 3;
-			$this->_msgTxt= '<strong>Error (501):</strong>
-				<br />Oops there was an error sending the data!';
-			$this->_displayMessage();
-		}
+            $this->_phpMailer->IsHTML(true);
+            if(!$this->_phpMailer->Send()){
+                    $this->_error 	= 3;
+                    $this->_msgTxt= '<strong>Error(phpMailer 501):</strong>
+                            <br />Oops there was an error processing the data!';
+                    $this->_displayMessage();
+            }
 	}
 	
 	private function _writeToDB(){
